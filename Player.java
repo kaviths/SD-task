@@ -1,28 +1,29 @@
 public class Player {
-    String name;
-    int age;
-    String type; // spin, seam, batsman, keeper
-    int stats; //total number of runs or wickets in the last 15 matches
 
-    public Player(String name, int age, String type, int stats) {
-        this.name = name;
-        this.age = age;
-        this.type = type;
-        this.stats = stats;
+    private String playerName;
+    private int playerAge;
+    private String playerType; 		// spin, seam, batsman, keeper
+    private int playerStatistic; 	//total number of runs or wickets in the last 15 matches
+
+    public Player(){}																			//this is the Default constructor
+
+    public Player(String playerName, int playerAge, String playerType, int playerStatistic) {	//this is a Overloaded constructor
+        this.playerName = playerName;
+        this.playerAge = playerAge;
+        this.playerType = playerType;
+        this.playerStatistic = playerStatistic;
     }
 
     public void getAverage(){
-        System.out.println("Player Average = " + stats/15);
+        System.out.println("Player Average = " + playerStatistic/15);
     }
 
     public void getDetails(){
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Type: " + type);
-        System.out.println("Stats (Last 15 matches): " + stats);
+        System.out.println("Name: " + playerName);
+        System.out.println("Age: " + playerAge);
+        System.out.println("Type: " + playerType);
+        System.out.println("Stats (Last 15 matches): " + playerStatistic);
+        System.out.println("");
     }
 
-    public void getType(){
-        System.out.println("Player Type: " + type);
-    }
 }
